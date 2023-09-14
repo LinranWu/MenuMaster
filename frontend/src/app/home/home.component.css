@@ -33,3 +33,7 @@
   margin-top: 10px;
   cursor: pointer; 
 }
+
+.search-button:hover {
+  background-color: #0056b3; 
+}
