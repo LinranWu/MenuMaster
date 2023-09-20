@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Alqueria Farmhouse Kitchen",
+        "rating": 4.5,
+        "reviews": [
+            {
+                "rating": 5,
+                "text": "First, let me start with the bottom line: Alqueria is in my experience the best farm-to-table restaurant for your money in North America. And I've lived in...",
+                "time_created": "2023-07-20 05:05:07"
+            },
+            {
+                "rating": 4,
+                "text": "Service was great from start to finish.  Very friendly and very attentive. We came on Saturday as soon as they opened for service. \n\nWe ordered their...",
+                "time_created": "2023-09-02 16:08:55"
+            },
+            {
+                "rating": 4,
+                "text": "Food was super impressive. Third and Hollywood level vibe but less expensive. The sweet potato appetizer had a sauce that was unbelievable, and the Brussels...",
+                "time_created": "2023-03-21 19:29:29"
+            }
+        ]
+    }
+]
