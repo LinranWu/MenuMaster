@@ -2,7 +2,7 @@
 .home-content {
   background-color: black;
   color: white; 
-  height: 100vh; 
+  height: 95vh; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,6 +16,7 @@
 .search-box {
   padding: 10px;
   font-size: 16px; 
+  font-family: 'Times New Roman', Times, serif;
   width: 300px; 
   border: none; 
   background-color: rgba(255, 255, 255, 0.2);
@@ -26,6 +27,7 @@
 .search-button {
   padding: 10px 20px;
   font-size: 16px; 
+  font-family: 'Times New Roman', Times, serif;
   background-color: #007bff; 
   color: white;
   border: none; 
