@@ -18,8 +18,27 @@ es = Elasticsearch(
 # The directory containing your JSON files
 json_folder = "CapstoneJsonData"
 
-print(es.info())
-print(os.getcwd())
+index_name = 'search-business-data'
+
+es.indices.create(
+    index=index_name,
+    body={
+        "mappings": {
+            "properties": {
+                "business_details": {
+                    "type": "object",
+                    "properties": {
+                        "name": {"type": "text"},
+                        "business_id": {"type": "keyword"},
+                        "categories": {"type": "text"}
+                    }
+                },
+                "encoding": {"type": "dense_vector", "dims": 768}  # Adjust dims to match the dimension of your encodings
+            }
+        }
+    },
+    ignore=400
+)
 
 # Loop through the files in the folder
 for filename in os.listdir(json_folder):
@@ -33,7 +52,7 @@ for filename in os.listdir(json_folder):
             json_data = json.load(file)
 
         # Index the JSON data into Elasticsearch
-        es.index(index='search-business-data', body=json_data)
+        es.index(index=index_name, body=json_data)
 
 # Refresh the index to make the documents searchable
-es.indices.refresh(index='search-business-data')
+es.indices.refresh(index=index_name)
