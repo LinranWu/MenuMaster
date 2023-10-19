@@ -58,7 +58,7 @@ def search():
     }
     try:
         response = es.search(index=index_name, body=query)
-        response_data = [hit['_source'] for hit in response['hits']['hits']]
+        response_data = [hit['_source']['business_details'] for hit in response['hits']['hits']]
 
         return jsonify({'response': response_data}), 200
 
