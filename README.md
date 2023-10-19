@@ -3,6 +3,9 @@
 ## Data:
 https://www.dropbox.com/scl/fo/xwa4jfceilh0x6offhqgy/h?rlkey=6biy1h6eeblizmlgmqsok79un&dl=0
 
+## ElasticSearch with Docker Help:
+https://www.elastic.co/blog/getting-started-with-the-elastic-stack-and-docker-compose
+
 ## ElasticSearch
 ### To Initialize:
 * Ensure Docker is installed on your machine
