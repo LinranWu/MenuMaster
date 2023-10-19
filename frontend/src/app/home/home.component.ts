@@ -12,6 +12,6 @@ export class HomeComponent {
 
   navigateToResults() {
     console.log('Search Query:', this.searchQuery);
-    this.router.navigate(['/results'], { queryParams: { query: this.searchQuery } }); // Navigate to the results page
+    this.router.navigate(['/results', this.searchQuery ]); // Navigate to the results page
   }
 }

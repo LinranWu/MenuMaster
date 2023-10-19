@@ -5,10 +5,13 @@ from dotenv import load_dotenv
 import tensorflow_hub as hub
 import tensorflow_text as text
 import json
+from flask_cors import CORS
+
 
 load_dotenv()
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 encoder_url = 'https://tfhub.dev/tensorflow/bert_en_uncased_L-12_H-768_A-12/4'
 preprocessing_url = 'https://tfhub.dev/tensorflow/bert_en_uncased_preprocess/3'
