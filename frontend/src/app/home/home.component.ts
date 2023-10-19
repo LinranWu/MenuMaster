@@ -7,9 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  searchQuery: string = '';
   constructor(private router: Router) {}
 
   navigateToResults() {
-    this.router.navigate(['/results']); // Navigate to the results page
+    console.log('Search Query:', this.searchQuery);
+    this.router.navigate(['/results'], { queryParams: { query: this.searchQuery } }); // Navigate to the results page
   }
 }
