@@ -16,7 +16,7 @@ es = Elasticsearch(
     verify_certs=False,  # Set to False. Do not need to verify the server SSL certificate
 )
 # The directory containing your JSON files
-json_folder = "CapstoneJsonData"
+json_folder = "ElasticSearch/EncodedJsons"
 
 index_name = 'search-business-data'
 
@@ -56,3 +56,5 @@ for filename in os.listdir(json_folder):
 
 # Refresh the index to make the documents searchable
 es.indices.refresh(index=index_name)
+
+
