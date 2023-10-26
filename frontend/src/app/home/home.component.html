@@ -1,10 +1,10 @@
 
 <div class="home-content">
-    <h1>Welcome to Menu Masters</h1>
-    <div class="search-container">
-      <input type="text" placeholder="What are you looking for?" class="search-box">
-      <button class="search-button"(click)="navigateToResults()">Search</button>
-  </div>
+  <h1>Welcome to Our Recommendation Bot</h1>
+  <form (ngSubmit)="navigateToResults()">
+    <input type="text" placeholder="What are you looking for?" class="search-box" [(ngModel)]="searchQuery" name="searchQuery">
+    <button type="submit" class="search-button">Search</button>
+  </form>   
 </div>
 
 

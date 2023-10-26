@@ -7,8 +7,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'results', component: ResultsComponent},
-  { path: 'about-us', component: AboutUsComponent },
+  {path: 'results/:searchQuery', component: ResultsComponent},
 ];
 
 @NgModule({
