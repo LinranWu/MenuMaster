@@ -18,14 +18,14 @@ https://www.elastic.co/blog/getting-started-with-the-elastic-stack-and-docker-co
 * Adjust the `.env` file as necessary
 
 ## Create a Docker Image - Frontend
-* Enter the `\backend` directory
-* Run `docker build -t flask-image .`
+* Enter the `\frontend` directory
+* Run `docker build -t angular-image .`
   * This will create an image to use in the docker compose script later
     
 ## Create a Docker Image - Backend
 * Enter the `\backend` directory
-* Run `docker build -t angular-image .`
-  * This will create an image to use in the docker compose script later    
+* Run `docker build -t flask-image .`
+  * This will create an image to use in the docker compose script later
 
 ## Run the Docker Compose
 * Enter the root directory (`\MenuMaster`)
