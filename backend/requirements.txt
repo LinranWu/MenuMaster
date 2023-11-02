@@ -1,0 +1,6 @@
+elasticsearch==8.10.0
+Flask==3.0.0
+Flask-Cors==4.0.0
+python-dotenv==1.0.0
+tensorflow-text==2.14.0
+tensorflow-hub==0.15.0

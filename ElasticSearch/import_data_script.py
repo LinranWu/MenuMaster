@@ -8,15 +8,16 @@ load_dotenv()
 user = "elastic"
 
 password = os.environ.get('ELASTIC_PASSWORD')
+elasticsearchURL = os.environ.get('ELASTICSEARCH_URL_LOCAL_MACHINE')
 
 # Define your Elasticsearch server
 es = Elasticsearch(
-    ['https://localhost:9200'],  # Replace with your Elasticsearch server URL
+    [elasticsearchURL],
     basic_auth=(user, password),
     verify_certs=False,  # Set to False. Do not need to verify the server SSL certificate
 )
 # The directory containing your JSON files
-json_folder = "ElasticSearch/EncodedJsons"
+json_folder = "CapstoneJsonData"
 
 index_name = 'search-business-data'
 
