@@ -51,10 +51,13 @@ https://www.elastic.co/blog/getting-started-with-the-elastic-stack-and-docker-co
   * From the `Containers` section, select `es01-1`, `kibana-1`, `flask-backend-1`, and `angular-frontend-1` from within the `capstone` compose
   * Press the start button (looks like a play button) and the project will start all apps
 * However, I believe there is a way to restart the docker compose by running the following command:
-  * `docker compose start capstone`
+  * `docker-compose start capstone`
   * Where `capstone` is the name of our compose
 
 ___
+
+> [!WARNING]
+> The current version of the product uses the above instructions. Below are past instructions that do not work with the current version.
 
 # Deprecated Instructions
 
