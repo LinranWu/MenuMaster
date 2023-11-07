@@ -2,7 +2,7 @@
 .home-content {
   background-color: black;
   color: white; 
-  height: 100vh; 
+  height: 95vh; 
   display: flex;
   flex-direction: column;
   justify-content: center;
