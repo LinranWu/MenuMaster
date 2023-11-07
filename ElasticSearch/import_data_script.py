@@ -16,7 +16,7 @@ es = Elasticsearch(
     verify_certs=False,  # Set to False. Do not need to verify the server SSL certificate
 )
 # The directory containing your JSON files
-json_folder = "ElasticSearch/EncodedJsons"
+json_folder = "EncodedJsons"
 
 index_name = 'search-business-data'
 
