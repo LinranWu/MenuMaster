@@ -34,6 +34,17 @@ def search():
         data = request.get_json()
     else:
         data = request.form
+    
+    keywords =["indian", "italian", "chinese", "mexican", "japanese", 
+    "thai", "french", "spanish", "greek", "lebanese", 
+    "ethiopian", "vietnamese", "korean", "turkish", "brazilian", 
+    "moroccan", "russian", "peruvian", "cuban", "german", 
+    "filipino", "caribbean", "south african", "polish", 
+    "egyptian", "hawaiian", "iranian", "portuguese", "argentine", "belgian", "danish", 
+    "finnish", "dutch", "hungarian", "indonesian", 
+    "malaysian", "nepalese", "pakistani", "romanian", "swiss", 
+    "armenian", "mediterranean", "asian"]
+    matched_keywords = [keyword for keyword in keywords if keyword in data['inputText'].lower()]
 
     preprocessed_text = preprocessing_model([data['inputText']])
     preprocessed_text['input_word_ids']
@@ -43,19 +54,41 @@ def search():
     input_vector = bert_results['pooled_output']
     input_vector = input_vector.numpy()
     input_vector = input_vector.tolist()[0]
+    
+    if matched_keywords: 
+        filter_query = {
+            "terms": {
+                "business_details.categories": matched_keywords
+            }
+        }
+    else:  
+        filter_query = {
+            "match_all": {}
+        }
 
     query = {
         "size": 3,
         "query": {
-            "script_score": {
-                "query": {"match_all": {}},
-                "script": {
-                    "source": "cosineSimilarity(params.query_vector, 'encoding') + 1.0",
-                    "params": {"query_vector": input_vector}
-                },
+            "bool": {
+                "must": {
+                    "script_score": {
+                        "query": {
+                            "bool": {
+                                "filter": filter_query
+                            }
+                        },
+                        "script": {
+                            "source": "cosineSimilarity(params.query_vector, 'encoding') + 1.0",
+                            "params": {"query_vector": input_vector}
+                        }
+                    }
+                }
             }
         }
     }
+
+
+
     try:
         response = es.search(index=index_name, body=query)
         response_data = [hit['_source']['business_details'] for hit in response['hits']['hits']]
