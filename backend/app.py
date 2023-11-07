@@ -23,10 +23,11 @@ index_name = "search-business-data"
 
 user = 'elastic'
 password = os.environ.get('ELASTIC_PASSWORD')
+elasticsearchURL = os.environ.get('ELASTICSEARCH_HOSTS')
 
 # Configure Elasticsearch
 es = Elasticsearch(
-  "https://localhost:9200",
+  elasticsearchURL,
   basic_auth=(user, password),
   verify_certs=False
 )
