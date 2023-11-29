@@ -1,20 +1,20 @@
 <div class="results-content">
-    <p></p>
-    Here are your results for: {{ searchQuery }}
-    <table>
-        <thead>
+  <p class="results-header">Results for: {{ searchQuery }}</p>
+  <table class="results-table">
+      <thead>
           <tr>
-            <th>Name</th>
-            <th>Categories</th>
-            <th>Business ID</th>
+              <th>Name</th>
+              <th>Categories</th>
+              <th>Business ID</th>
           </tr>
-        </thead>
-        <tbody>
+      </thead>
+      <tbody>
           <tr *ngFor="let item of parsedResponse">
-            <td>{{ item.name }}</td>
-            <td>{{ item.categories }}</td>
-            <td>{{ item.business_id }}</td>
+              <td>{{ item.name }}</td>
+              <td>{{ item.categories }}</td>
+              <td>{{ item.business_id }}</td>
           </tr>
-        </tbody>
-      </table>
+      </tbody>
+  </table>
 </div>
+
