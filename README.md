@@ -21,11 +21,17 @@ https://www.elastic.co/blog/getting-started-with-the-elastic-stack-and-docker-co
 * Enter the `\frontend` directory
 * Run `docker build -t angular-image .`
   * This will create an image to use in the docker compose script later
+### Alternatively, Pull Image From Here:
+* https://hub.docker.com/r/ekenkel/angular-image
+* However, this approach will require changing the `docker-compose.yml` to the updated name of the image
     
 ## Create a Docker Image - Backend
 * Enter the `\backend` directory
 * Run `docker build -t flask-image .`
   * This will create an image to use in the docker compose script later
+### Alternatively, Pull Image From Here:
+* https://hub.docker.com/r/ekenkel/flask-image
+* However, this approach will require changing the `docker-compose.yml` to the updated name of the image
 
 ## Run the Docker Compose
 * Enter the root directory (`\MenuMaster`)

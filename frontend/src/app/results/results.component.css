@@ -1,9 +1,50 @@
+  /* Styles for the results content */
 .results-content {
-    background-color: black;
-    color: white; 
-    height: 95vh; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+/* Styles for the results header */
+.results-header {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+}
+
+/* Styles for the table */
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+/* Styles for table headings */
+.results-table th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  text-align: left;
+}
+
+/* Styles for table cells */
+.results-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  color: white;
+}
+
+/* Alternating row colors */
+.results-table tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Hover effect on rows */
+.results-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}

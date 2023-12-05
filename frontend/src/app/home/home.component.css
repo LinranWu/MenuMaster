@@ -37,3 +37,11 @@
 .search-button:hover {
   background-color: #0056b3; 
 }
+
+.corner-image {
+  position: fixed;
+  top: 100px; 
+  right: 100px; 
+  width: 200px; 
+  height: auto; 
+}

@@ -10,7 +10,7 @@ import { ApiService } from '../api.service';
 export class ResultsComponent implements OnInit {
   searchQuery: string='';
   response:any;
-  output:string=''
+  parsedResponse: any[] = [];
   constructor(private apiService: ApiService, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -27,7 +27,7 @@ export class ResultsComponent implements OnInit {
         data => {
           this.response = data;
           console.log('API Response:', data);
-          this.output=JSON.stringify(this.response);
+          this.parsedResponse = this.response.response;
         },
         error => {
           console.error(error);

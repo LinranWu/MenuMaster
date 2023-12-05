@@ -7,3 +7,18 @@
     justify-content: center;
     align-items: center;
   }
+
+.text-container {
+  text-align: center;
+  font-size: 30px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.corner-image {
+  position: fixed;
+  top: 100px; 
+  right: 100px; 
+  width: 200px; 
+  height: auto; 
+}

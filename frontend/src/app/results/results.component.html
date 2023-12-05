@@ -1,5 +1,18 @@
 <div class="results-content">
-    <p></p>
-    Here are your results for: {{ searchQuery }}
-    <p>{{output}}</p>
+  <p class="results-header">Results for: {{ searchQuery }}</p>
+  <table class="results-table">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Categories</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let item of parsedResponse">
+              <td>{{ item.name }}</td>
+              <td>{{ item.categories }}</td>
+          </tr>
+      </tbody>
+  </table>
 </div>
+
